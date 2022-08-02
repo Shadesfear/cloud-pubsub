@@ -27,6 +27,10 @@ impl EncodedMessage {
         let data = base64::encode(&json);
         EncodedMessage { data, attributes }
     }
+
+    pub fn attributes(&self) -> Option<&HashMap<String, String>> {
+        self.attributes.as_ref()
+    }
 }
 
 #[derive(Deserialize)]
