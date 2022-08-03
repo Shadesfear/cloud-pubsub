@@ -28,8 +28,8 @@ impl EncodedMessage {
         EncodedMessage { data, attributes }
     }
 
-    pub fn attributes(&self) -> Option<&HashMap<String, String>> {
-        self.attributes.as_ref()
+    pub fn attributes(&self) -> Option<HashMap<String, String>> {
+        self.attributes.clone()
     }
 }
 
